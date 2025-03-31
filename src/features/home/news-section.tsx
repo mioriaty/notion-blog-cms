@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export default function NewsSection() {
   return (
-    <div className="max-w-6xl mx-auto p-10 bg-white rounded-3xl border">
+    <div className="max-w-6xl mx-auto sm:p-10 p-4 bg-white rounded-3xl border">
       <div className="grid md:grid-cols-[1fr,2fr] gap-8">
         {/* Left Column */}
         <div className="space-y-6">
           <div>
-            <h2 className="text-4xl font-bold tracking-tight">Latest News</h2>
+            <h2 className="text-4xl font-bold tracking-tight">Latest Blogs</h2>
             <p className="mt-4 text-muted-foreground">A place to share my thoughts and ideas</p>
           </div>
 
