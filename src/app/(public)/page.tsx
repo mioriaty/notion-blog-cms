@@ -1,5 +1,4 @@
 import { HomeHero } from '@/features/home/home-hero';
-import { UserList } from '@/features/users/user-list';
 
 export default function Home() {
   return (
