@@ -1,4 +1,10 @@
+'use client';
+
+import { ArrowLeftIcon, BackpackIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
+import { Button } from '@/libs/components/ui/button';
 
 interface PostProps {
   title: string;
@@ -9,23 +15,32 @@ interface PostProps {
 }
 
 export function Post(props: PostProps) {
-  const { title, content, bannerImage, bannerImageHeight } = props;
+  const { title, content, bannerImage, bannerImageHeight, bannerImageWidth } = props;
+  const router = useRouter();
+
+  const handleBackToBlogsList = () => {
+    router.push('/blogs');
+  };
 
   return (
     <article className="w-full mb-10 flex flex-col items-center pt-10 pl-3 pr-3">
-      <h1 className="text-6xl font-black text-black mb-8">{title}</h1>
-      <Image
-        alt="Blog Image"
-        src={bannerImage}
-        // width={bannerImageWidth}
-        width={'800'}
-        height={bannerImageHeight}
-        className="[width: 800px]! max-w-full"
-      />
-      <div
-        className="text-xl mt-4 max-w-3xl prose prose-p:text-black prose-headings:text-black"
-        dangerouslySetInnerHTML={{ __html: content }}
-      ></div>
+      <div className="w-full max-w-3xl mb-6">
+        <Button size={'sm'} variant="link" onClick={handleBackToBlogsList}>
+          <ArrowLeftIcon />
+          Back to Blogs
+        </Button>
+      </div>
+      <h1 className="text-6xl font-black mb-8">{title}</h1>
+      {bannerImage && (
+        <Image
+          alt="Blog Image"
+          src={bannerImage}
+          width={bannerImageWidth}
+          height={bannerImageHeight}
+          className="[width: 800px]! max-w-full"
+        />
+      )}
+      <div className="text-xl mt-4 max-w-3xl prose " dangerouslySetInnerHTML={{ __html: content }}></div>
     </article>
   );
 }

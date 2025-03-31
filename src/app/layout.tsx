@@ -3,6 +3,7 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { Be_Vietnam_Pro as FontSans } from 'next/font/google';
 import NextjsTopLoader from 'nextjs-toploader';
 
+import Header from '@/libs/components/header/header';
 import { TanstackProvider } from '@/libs/providers/tanstack-provider';
 import { cn } from '@/libs/utils/class-names';
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         <NextjsTopLoader height={2} showSpinner={false} color="hsl(var(--primary))" />
         <TanstackProvider>
           <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            <Header />
             {children}
           </NextThemesProvider>
         </TanstackProvider>
