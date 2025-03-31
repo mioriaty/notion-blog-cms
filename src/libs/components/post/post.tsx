@@ -23,7 +23,7 @@ export function Post(props: PostProps) {
         className="[width: 800px]!"
       />
       <div
-        className="text-xl mt-4 max-w-3xl leading-10 prose prose-p:text-black prose-headings:text-black"
+        className="text-xl mt-4 max-w-3xl prose prose-p:text-black prose-headings:text-black"
         dangerouslySetInnerHTML={{ __html: content }}
       ></div>
     </article>
