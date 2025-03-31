@@ -1,5 +1,5 @@
 import { INotionPageResponse } from '@/data-access/models/notion-page';
-import { getPages } from '@/libs/notion/notion-service';
+import { getPages } from '@/data-access/api/notion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ export default async function PostsPage() {
           const bannerImage = post.properties.banner_image?.files[0]?.file?.url ?? '';
 
           return (
-            <Link href={`/posts/${slug}`} key={post.id} className="block">
+            <Link href={`/blogs/${slug}`} key={post.id} className="block">
               <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
                 {bannerImage && (
                   <div className="relative h-48 w-full">

@@ -1,4 +1,4 @@
-import { getPageContent, getPageBySlug, notionClient } from '@/libs/notion/notion-service';
+import { getPageContent, getPageBySlug } from '@/data-access/api/notion';
 import { NotionRenderer } from '@notion-render/client';
 import { notFound } from 'next/navigation';
 
@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import hljsPlugin from '@notion-render/hljs-plugin';
 import bookmarkPlugin from '@notion-render/bookmark-plugin';
 import { Post } from '@/libs/components/post';
+import { notionClient } from '@/libs/notion/client';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
