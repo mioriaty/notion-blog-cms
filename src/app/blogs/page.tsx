@@ -1,3 +1,5 @@
+'use client';
+
 import { BlogsList } from '@/features/blogs/blogs';
 
 export default function PostsPage() {
