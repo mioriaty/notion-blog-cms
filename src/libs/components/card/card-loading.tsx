@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function NewsCardLoading() {
   return (
-    <div className="block group p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+    <div className="block group p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors">
       <div className="flex justify-between items-start">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
