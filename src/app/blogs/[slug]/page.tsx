@@ -37,7 +37,7 @@ export default async function Page({ params }: PageProps) {
     <Post
       title={post.properties.Name.title[0]?.plain_text || 'Untitled'}
       bannerImage={post.properties.banner_image?.files[0]?.file?.url ?? ''}
-      bannerImageWidth={400}
+      bannerImageWidth={800}
       bannerImageHeight={400}
       content={html}
     />

@@ -4,6 +4,7 @@ import { ArrowLeftIcon, BackpackIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+import { LazyImage } from '@/libs/components/lazy-image/lazy-image';
 import { Button } from '@/libs/components/ui/button';
 
 interface PostProps {
@@ -32,7 +33,7 @@ export function Post(props: PostProps) {
       </div>
       <h1 className="text-6xl font-black mb-8">{title}</h1>
       {bannerImage && (
-        <Image
+        <LazyImage
           alt="Blog Image"
           src={bannerImage}
           width={bannerImageWidth}

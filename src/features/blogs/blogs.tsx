@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react';
 
 import { AsyncComponent } from '@/libs/components/async-component/async-component';
 import { NewsCard } from '@/libs/components/card/card';
+import { NewsCardLoading } from '@/libs/components/card/card-loading';
 
 export const BlogsList = ({ limit }: { limit?: number }) => {
   const { data: response, isError, isLoading, isSuccess, isFetched } = useGetPagesQuery();
@@ -17,7 +18,9 @@ export const BlogsList = ({ limit }: { limit?: number }) => {
       isError={isError}
       isLoading={isLoading}
       isSuccess={isSuccess || isFetched}
-      Loading={<Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+      Loading={Array.from({ length: 3 }).map((_, index) => (
+        <NewsCardLoading key={index} />
+      ))}
       Success={limitedPosts.map((post) => {
         const title = post.properties.Name.title[0]?.plain_text || 'Untitled';
         const slug = post.properties.slug.rich_text[0]?.plain_text;

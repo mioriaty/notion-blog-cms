@@ -1,20 +1,17 @@
 'use client';
 
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
 import { cn } from '@/libs/utils/class-names';
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  // const [mounted, setMounted] = useState(false);
+  // const { theme, setTheme } = useTheme();
   const pathname = usePathname();
 
-  useEffect(() => setMounted(true), []);
+  // useEffect(() => setMounted(true), []);
 
   return (
     <motion.header
@@ -27,11 +24,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Flowers & Saints</span>
-            <img
-              className="h-8 w-auto"
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/creative-SW6QDQbcVuwPgb6a2CYtYmRbsJa4k1.png"
-              alt="Flowers & Saints Logo"
-            />
+            <img className="h-8 w-auto" src="/strawberry.png" alt="Flowers & Saints Logo" />
           </Link>
         </div>
         <div className="flex gap-x-12">
@@ -56,7 +49,7 @@ export default function Header() {
             Blogs
           </Link>
         </div>
-        <div className="flex flex-1 justify-end">
+        {/* <div className="flex flex-1 justify-end">
           {mounted && (
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -65,7 +58,7 @@ export default function Header() {
               {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
             </button>
           )}
-        </div>
+        </div> */}
       </nav>
     </motion.header>
   );

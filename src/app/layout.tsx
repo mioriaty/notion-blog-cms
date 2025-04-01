@@ -38,7 +38,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Duong's Blog",
-  description: 'A place to share my thoughts and ideas'
+  description: 'My inner world'
 };
 
 export default function RootLayout({

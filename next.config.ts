@@ -5,18 +5,22 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com',
-        pathname: '/**',
+        pathname: '/**'
+      },
+      {
+        hostname: 'placehold.jp',
+        pathname: '/**'
       },
       {
         hostname: 'localhost',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         hostname: 'placehold.co',
-        pathname: '/**',
-      },
-    ],
-  },
+        pathname: '/**'
+      }
+    ]
+  }
 };
 
 export default nextConfig;
