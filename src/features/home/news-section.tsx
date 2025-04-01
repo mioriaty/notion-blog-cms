@@ -14,7 +14,7 @@ export default function NewsSection() {
 
           <Link
             href="/blogs"
-            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-300 to-blue-600 hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium text-white bg-blue-700"
           >
             View all blogs
           </Link>

@@ -15,19 +15,19 @@ export default function Header() {
 
   return (
     <motion.header
-      className="sticky top-0 z-50 bg-reading/80 backdrop-blur-md"
+      className="sticky top-0 z-50 bg-reading/80 backdrop-blur-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Flowers & Saints</span>
             <img className="h-8 w-auto" src="/strawberry.png" alt="Flowers & Saints Logo" />
           </Link>
         </div>
-        <div className="flex gap-x-12">
+        <div className="flex gap-x-6">
           <Link
             href="/"
             rel="noopener noreferrer"

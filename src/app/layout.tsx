@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import NextjsTopLoader from 'nextjs-toploader';
 
 import Header from '@/libs/components/header/header';
+import { ScrollToTop } from '@/libs/components/scroll-to-top/scroll-to-top';
 import { TanstackProvider } from '@/libs/providers/tanstack-provider';
 import { cn } from '@/libs/utils/class-names';
 
@@ -55,6 +56,7 @@ export default function RootLayout({
           <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Header />
             {children}
+            <ScrollToTop />
           </NextThemesProvider>
         </TanstackProvider>
       </body>
