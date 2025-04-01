@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function NewsSection() {
   return (
-    <div className="max-w-6xl mx-auto sm:p-10 p-4 bg-white rounded-3xl border">
-      <div className="grid md:grid-cols-[1fr,2fr] gap-8">
+    <div className="max-w-7xl mx-auto sm:p-10 p-4 bg-white rounded-3xl border">
+      <div className="grid md:grid-cols-[1fr,2fr] gap-4">
         {/* Left Column */}
         <div className="space-y-6">
           <div>
@@ -28,24 +28,3 @@ export default function NewsSection() {
     </div>
   );
 }
-
-const newsItems = [
-  {
-    category: 'Category',
-    date: 'June 2023',
-    title:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
-  },
-  {
-    category: 'Category',
-    date: 'June 2023',
-    title:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
-  },
-  {
-    category: 'Category',
-    date: 'June 2023',
-    title:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
-  }
-];
