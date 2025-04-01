@@ -41,7 +41,10 @@ export function Post(props: PostProps) {
           className="[width: 800px]! max-w-full"
         />
       )}
-      <div className="text-xl mt-4 max-w-3xl prose " dangerouslySetInnerHTML={{ __html: content }}></div>
+      <div
+        className="text-xl mt-4 max-w-3xl prose prose-p:font-serif prose-headings:font-sans"
+        dangerouslySetInnerHTML={{ __html: content }}
+      ></div>
     </article>
   );
 }

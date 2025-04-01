@@ -10,7 +10,7 @@ interface NewsItemProps {
 
 export function NewsCard({ category, date, title, href }: NewsItemProps) {
   return (
-    <Link href={href} className="block group p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+    <Link href={href} className="block group p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors">
       <div className="flex justify-between items-start">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
