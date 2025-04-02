@@ -8,5 +8,6 @@ export interface INotionPageResponse extends PageObjectResponse {
     published_date: PageObjectResponse['properties']['published_date'] & Record<string, any>;
     short_desc: PageObjectResponse['properties']['short_desc'] & Record<string, any>;
     tags: PageObjectResponse['properties']['tags'] & Record<string, any>;
+    status: PageObjectResponse['properties']['status'] & Record<string, any>;
   };
 }

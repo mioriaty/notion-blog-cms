@@ -1,3 +1,4 @@
+import { baseOpenGraph } from '@/shared/metadata';
 import type { Metadata } from 'next';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { Be_Vietnam_Pro as FontSans } from 'next/font/google';
@@ -40,7 +41,10 @@ const textFont = localFont({
 
 export const metadata: Metadata = {
   title: "Duong's Blog",
-  description: 'My inner world'
+  description: 'My inner world',
+  openGraph: {
+    ...baseOpenGraph
+  }
 };
 
 export default function RootLayout({

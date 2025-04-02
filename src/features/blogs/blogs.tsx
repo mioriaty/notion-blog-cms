@@ -13,6 +13,8 @@ export const BlogsList = ({ limit }: { limit?: number }) => {
   const posts = (response?.results ?? []) as INotionPageResponse[];
   const limitedPosts = limit ? posts.slice(0, limit) : posts;
 
+  console.log('limitedPosts', limitedPosts);
+
   return (
     <AsyncComponent
       isError={isError}
@@ -26,8 +28,18 @@ export const BlogsList = ({ limit }: { limit?: number }) => {
         const slug = post.properties.slug.rich_text[0]?.plain_text;
         const published_date = post.properties.published_date.date.start;
         const tags = (post.properties.tags.multi_select?.map((tag: any) => tag.name) || []).join(', ');
+        const status = post.properties.status.status.name;
 
-        return <NewsCard key={post.id} href={`/blogs/${slug}`} category={tags} date={published_date} title={title} />;
+        return (
+          <NewsCard
+            key={post.id}
+            href={`/blogs/${slug}`}
+            category={tags}
+            date={published_date}
+            title={title}
+            status={status}
+          />
+        );
       })}
     />
   );
