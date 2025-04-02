@@ -13,8 +13,6 @@ export const BlogsList = ({ limit }: { limit?: number }) => {
   const posts = (response?.results ?? []) as INotionPageResponse[];
   const limitedPosts = limit ? posts.slice(0, limit) : posts;
 
-  console.log('limitedPosts', limitedPosts);
-
   return (
     <AsyncComponent
       isError={isError}
