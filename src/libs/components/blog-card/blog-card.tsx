@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Badge } from '@/libs/components/ui/badge';
 import { cn } from '@/libs/utils/class-names';
 
-interface NewsItemProps {
+interface BlogCardProps {
   category: string;
   date: string;
   title: string;
@@ -12,7 +12,7 @@ interface NewsItemProps {
   status: string;
 }
 
-export function NewsCard({ category, date, title, href, status }: NewsItemProps) {
+export function BlogCard({ category, date, title, href, status }: BlogCardProps) {
   const getStatusColor = () => {
     switch (status) {
       case 'Not started':

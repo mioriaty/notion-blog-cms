@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 
-export function NewsCardLoading() {
+export function BlogCardLoading() {
   return (
     <div className="block group px-4 py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors">
       <div className="flex justify-between items-start">

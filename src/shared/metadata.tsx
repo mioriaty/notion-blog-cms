@@ -7,7 +7,7 @@ export const baseOpenGraph = {
   siteName: "Duong's Blog",
   images: [
     {
-      url: `${envConfig.NEXT_PUBLIC_URL}/banner.jpg`
+      url: `${envConfig.NEXT_PUBLIC_URL}/banner.jpeg`
     }
   ]
 };
