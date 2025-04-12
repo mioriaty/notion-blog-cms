@@ -1,16 +1,23 @@
 'use client';
 
 import Image, { ImageProps } from 'next/image';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { cn } from '@/libs/utils/class-names';
 
-interface LazyImageProps extends Omit<ImageProps, 'onLoad'> {
+export interface LazyImageProps extends Omit<ImageProps, 'onLoad'> {
   fallbackSrc?: string;
   loadingClassName?: string;
 }
 
-export function LazyImage({ src, alt, fallbackSrc = '', className, loadingClassName, ...props }: LazyImageProps) {
+export const LazyImage: FC<LazyImageProps> = ({
+  src,
+  alt,
+  fallbackSrc = '',
+  className,
+  loadingClassName,
+  ...props
+}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [imgSrc, setImgSrc] = useState(fallbackSrc || src);
 
@@ -40,4 +47,4 @@ export function LazyImage({ src, alt, fallbackSrc = '', className, loadingClassN
       />
     </div>
   );
-}
+};

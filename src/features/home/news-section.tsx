@@ -1,7 +1,7 @@
 import { BlogsList } from '@/features/blogs/blogs';
 import Link from 'next/link';
 
-export default function NewsSection() {
+export default function BlogsSection() {
   return (
     <div className="max-w-7xl mx-auto sm:p-10 p-4 bg-white rounded-3xl border">
       <div className="grid md:grid-cols-[1fr,2fr] gap-4">

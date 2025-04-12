@@ -1,10 +1,11 @@
 import { ArrowUpRight, CheckCircle, Clock, Loader } from 'lucide-react';
 import Link from 'next/link';
+import { FC } from 'react';
 
 import { Badge } from '@/libs/components/ui/badge';
 import { cn } from '@/libs/utils/class-names';
 
-interface BlogCardProps {
+export interface BlogCardProps {
   category: string;
   date: string;
   title: string;
@@ -12,7 +13,7 @@ interface BlogCardProps {
   status: string;
 }
 
-export function BlogCard({ category, date, title, href, status }: BlogCardProps) {
+export const BlogCard: FC<BlogCardProps> = ({ category, date, title, href, status }) => {
   const getStatusColor = () => {
     switch (status) {
       case 'Not started':
@@ -40,7 +41,7 @@ export function BlogCard({ category, date, title, href, status }: BlogCardProps)
   };
 
   return (
-    <Link href={href} className="block group p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors">
+    <Link href={href} className="block group p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
       <div className="flex justify-between items-start">
         <div className="space-y-1 flex-1">
           <div className="flex items-center gap-2">
@@ -55,10 +56,10 @@ export function BlogCard({ category, date, title, href, status }: BlogCardProps)
             <p className="text-xs text-muted-foreground">{date}</p>
           </div>
         </div>
-        <div className="p-1 rounded-full group-hover:bg-slate-50 transition-colors">
+        <div className="p-1 rounded-full group-hover:bg-white transition-colors">
           <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-900 group-hover:rotate-45 transition-transform" />
         </div>
       </div>
     </Link>
   );
-}
+};

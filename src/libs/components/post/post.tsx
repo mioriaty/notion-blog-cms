@@ -42,7 +42,7 @@ export function Post(props: PostProps) {
         />
       )}
       <div
-        className="text-xl mt-4 max-w-3xl prose prose-p:font-serif prose-headings:font-sans"
+        className="text-xl mt-4 max-w-3xl prose prose-p:text-black prose-headings:text-black prose-p:font-serif prose-headings:font-sans prose-blockquote:border-black prose-blockquote:font-serif prose-hr:border-rose-500"
         dangerouslySetInnerHTML={{ __html: content }}
       ></div>
     </article>
