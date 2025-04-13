@@ -45,9 +45,9 @@ export const BlogCard: FC<BlogCardProps> = ({ category, date, title, href, statu
       <div className="flex justify-between items-start">
         <div className="space-y-1 flex-1">
           <div className="flex items-center gap-2">
-            <p className="text-xs font-medium capitalize text-orange-600">{category}</p>
+            <p className="text-xs font-medium capitalize text-blue-700">{category}</p>
           </div>
-          <h3 className="font-medium text-blue-600">{title}</h3>
+          <h3 className="font-medium text-primary">{title}</h3>
           <div className="flex justify-between items-center gap-2 !mt-3">
             <Badge className={cn('rounded-full flex items-center gap-1 font-medium', getStatusColor())}>
               {getStatusIcon()}
