@@ -44,6 +44,7 @@ export const LazyImage: FC<LazyImageProps> = ({
             setImgSrc(fallbackSrc);
           }
         }}
+        loading="lazy"
       />
     </div>
   );

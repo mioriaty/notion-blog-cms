@@ -31,7 +31,7 @@ export function Post(props: PostProps) {
           Back to Blogs
         </Button>
       </div>
-      <h1 className="text-6xl font-black mb-8">{title}</h1>
+      <h1 className="text-6xl font-black mb-8 max-w-7xl">{title}</h1>
       {bannerImage && (
         <LazyImage
           alt="Blog Image"
@@ -39,6 +39,7 @@ export function Post(props: PostProps) {
           width={bannerImageWidth}
           height={bannerImageHeight}
           className="[width: 800px]! max-w-full"
+          fetchPriority="high"
         />
       )}
       <div
