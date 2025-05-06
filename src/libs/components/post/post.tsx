@@ -1,7 +1,6 @@
 'use client';
 
-import { ArrowLeftIcon, BackpackIcon } from '@radix-ui/react-icons';
-import Image from 'next/image';
+import { ArrowLeftIcon } from '@radix-ui/react-icons';
 import { useRouter } from 'next/navigation';
 
 import { LazyImage } from '@/libs/components/lazy-image/lazy-image';
@@ -31,14 +30,14 @@ export function Post(props: PostProps) {
           Back to Blogs
         </Button>
       </div>
-      <h1 className="text-6xl font-black mb-8 max-w-7xl">{title}</h1>
+      <h1 className="text-6xl font-black text-reading mb-8 max-w-7xl">{title}</h1>
       {bannerImage && (
         <LazyImage
           alt="Blog Image"
           src={bannerImage}
           width={bannerImageWidth}
           height={bannerImageHeight}
-          className="[width: 800px]! max-w-full"
+          className="max-w-full w-[800px]"
           fetchPriority="high"
         />
       )}

@@ -54,7 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={cn('min-h-screen font-sans antialiased bg-reading', fontSans.variable, textFont.variable)}>
+      <body
+        className={cn('min-h-screen font-sans antialiased background-reading', fontSans.variable, textFont.variable)}
+      >
         <NextjsTopLoader height={2} showSpinner={false} color="hsl(var(--primary))" />
         <TanstackProvider>
           <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>

@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="sticky top-0 z-50 bg-reading/80 backdrop-blur-sm"
+      className="sticky top-0 z-50 background-reading/80 backdrop-blur-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
